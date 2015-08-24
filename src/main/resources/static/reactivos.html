@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+<link rel="stylesheet" href="css/angular-bootstrap.css">
+</head>
+<body>
+<div ng-show="authenticated">
+    <h2 class="badge">Reactivos ceneval inicio nuevo</h2>
+   <div class="form-group" ng-repeat="reacti in reactivo">
+       <label>{{reacti.pregunta}}</label>
+       <div class="radio"  ng-repeat="opcion in reacti.opciones">
+    <label>
+      <input type="radio" name={{reacti.pregunta}}>
+      {{opcion.titulo}}
+    </label>
+
+       </div>
+   </div>
+
+</div>
+
+</body>
+</html>
